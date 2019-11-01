@@ -1,0 +1,37 @@
+{
+  "name": "sandbox-api",
+  "version": "1.0.0",
+  "description": "Fork this repo to start making an Express API.",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint ./ --fix --config ./eslint.config.js",
+    "serve": "babel-node src/index.js --config-file ./babel.config.js",
+    "test": "jest --config ./jest.config.js",
+    "watch": "nodemon --exec yarn serve"
+  },
+  "author": "Paul Beynon <paul@beynon.app>",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "core-js": "3",
+    "dotenv": "^8.0.0",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-import-resolver-babel-module": "^5.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.2",
+    "express": "^4.17.1",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.1",
+    "supertest": "^4.0.2"
+  }
+}

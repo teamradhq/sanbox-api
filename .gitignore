@@ -1,0 +1,32 @@
+.env
+# Symfony runtime    #
+######################
+node_modules
+vendor/*
+
+# Logs and databases #
+######################
+*.log
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.buildpath
+.project
+.settings
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+*~
+/nbproject/
+.idea/*
+/symfony
+__MACOSX
+
+# Vagrant stuff #
+######################
+.vagrant/
+Vagrantfile
+vagrant/
