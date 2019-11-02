@@ -1,5 +1,6 @@
 import express from 'express';
 
+import app from '@/app';
 import logMiddleware from '@/middleware/logMiddleware';
 import example from '@/routes/example';
 
@@ -11,8 +12,7 @@ if (process.env.NODE_ENV !== 'test') {
 }
 
 server.get('/', (req, res) => {
-  const data = { data: 'Hello Sandbox' };
-  res.send({ data });
+  res.send(app);
 });
 
 server.use('/example', example);

@@ -2,7 +2,7 @@ import req from '#/mocks/req.mock';
 import res from '#/mocks/res.mock';
 import logMock from '#/mocks/log.mock';
 
-import * as log from '@/log';
+import * as log from '@/lib/log';
 import logMiddleware from '@/middleware/logMiddleware';
 
 const next = jest.fn();

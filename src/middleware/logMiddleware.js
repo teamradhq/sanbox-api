@@ -1,4 +1,4 @@
-import log from '@/log';
+import log from '@/lib/log';
 
 const logMiddleware = (req, res, next) => {
   const { method, originalUrl: url } = req;

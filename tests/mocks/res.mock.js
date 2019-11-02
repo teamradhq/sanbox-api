@@ -1,5 +1,7 @@
-export default {
-  redirect: jest.fn(),
-  send: jest.fn(),
-  status: jest.fn(),
+const res = {
+  redirect: jest.fn(() => res),
+  send: jest.fn(() => res),
+  status: jest.fn(() => res),
 };
+
+export default res;

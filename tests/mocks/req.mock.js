@@ -9,5 +9,5 @@ export default {
   originalUrl: '/',
   body: query,
   params: query,
-  query: query,
+  query,
 };
