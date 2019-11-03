@@ -18,6 +18,9 @@ const API_PORT = process.env.API_PORT || 3000;
 /** @type {String}   Base url for app requests. */
 const BASE_URL = process.env.BASE_URL || `${API_SCHEME}://${API_HOST}:${API_PORT}`;
 
+/** @type {String}   Relative path. to cache. */
+const JSON_STORE_PATH = process.env.JSON_STORE_PATH || 'cache/sonStore.json';
+
 process.env = {
   ...process.env,
   AUTH_KEY,
@@ -27,4 +30,5 @@ process.env = {
   API_HOST,
   APP_NAME,
   BASE_URL,
+  JSON_STORE_PATH,
 };

@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint ./ --fix --config ./eslint.config.js",
+    "lint-watch": "nodemon --exec yarn lint",
     "serve": "babel-node src/index.js --config-file ./babel.config.js",
     "test": "jest --config ./jest.config.js",
     "watch": "nodemon --exec yarn serve"
