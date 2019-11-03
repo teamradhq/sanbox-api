@@ -9,11 +9,7 @@ import setJsonStore from './setJsonStore';
  */
 const getJsonStore = (storepath) => {
   if (fs.existsSync(storepath)) {
-    const data = fs.readFileSync(storepath, 'utf8');
-    return JSON.parse(
-      fs.readFileSync(storepath, 'utf8')
-      || '{}'
-     );
+    return JSON.parse(fs.readFileSync(storepath, 'utf8') || '{}');
   }
 
   const data = {};

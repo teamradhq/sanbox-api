@@ -4,8 +4,6 @@ import app from '@/app';
 import logMiddleware from '@/middleware/logMiddleware';
 import example from '@/routes/example';
 
-import store from '@/server/store';
-console.log(store);
 const server = express();
 server.use(express.json());
 

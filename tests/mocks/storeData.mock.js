@@ -1,7 +1,7 @@
 export default {
   users: [
     {
-      id: 1,
+      id: 0,
       name: 'BillyBob',
       key: 'foo',
       secret: 'bar',
@@ -9,15 +9,15 @@ export default {
   ],
   posts: [
     {
-      id: 1,
+      id: 0,
       name: 'Awesome Sauce',
     },
     {
-      id: 2,
+      id: 1,
       name: 'Radical Toast',
     },
     {
-      id: 3,
+      id: 2,
       name: 'Rainbow Butter',
     },
   ],

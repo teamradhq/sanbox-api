@@ -25,17 +25,17 @@ Lint your code:
 yarn lint
 ```
 
-Test your code:
+Watch and test your code:
 ```
-yarn test
+yarn test --watch
 ```
 
-Lint, test and serve your code during development:
+Develop your code:
 ```
 yarn watch
 ```
 
-Create a `.env` file to override defaults (requires app restart):
+Create `.env` file to override defaults (requires app restart):
 ```
 cp example.env .env
 ```

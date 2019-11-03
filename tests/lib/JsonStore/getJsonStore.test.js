@@ -13,6 +13,10 @@ JSON.parse = jest.fn(() => expectedData);
 setJsonStore.default = jest.fn();
 
 describe('getJsonStore', () => {
+  beforeEach(() => {
+    process.env.JSON_STORE_PATH = '';
+  });
+
   it('should check if storepath exists', () => {
     getJsonStore();
   });
