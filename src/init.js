@@ -1,3 +1,5 @@
+import fs from 'fs';
+import path from 'path';
 import 'dotenv/config';
 
 /** @type {String}   Auth key, secret pair. */
@@ -18,8 +20,12 @@ const API_PORT = process.env.API_PORT || 3000;
 /** @type {String}   Base url for app requests. */
 const BASE_URL = process.env.BASE_URL || `${API_SCHEME}://${API_HOST}:${API_PORT}`;
 
-/** @type {String}   Relative path. to cache. */
-const JSON_STORE_PATH = process.env.JSON_STORE_PATH || 'cache/sonStore.json';
+/** @type {String}   Relative path to cache. */
+const JSON_STORE_PATH = path.resolve(process.env.JSON_STORE_PATH || 'cache');
+/* Make non-existent cache dir. */
+if(!fs.existsSync(JSON_STORE_PATH)) {
+   fs.mkdirSync(JSON_STORE_PATH);
+}
 
 process.env = {
   ...process.env,

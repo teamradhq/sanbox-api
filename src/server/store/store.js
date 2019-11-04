@@ -10,12 +10,6 @@ const store = {
 };
 
 store.users = new UserStore();
-store.users.setItem({
-  id: 1,
-  name: 'JimmyBob',
-  key: 'baz',
-  secret: 'blitz',
-});
 
 const resources = [
   'posts',

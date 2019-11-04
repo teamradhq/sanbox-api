@@ -2,14 +2,14 @@ import { resolve } from 'path';
 
 import JsonStore from '@/lib/JsonStore';
 
-const storePath = resolve(process.env.JSON_STORE_PATH || '');
+const storePath = process.env.JSON_STORE_PATH;
 const collection = Symbol.for('App.ResourceStoreCollection');
 const location = Symbol.for('App.ResourceStoreLocation');
 
 class ResourceStore {
   constructor(type) {
     this.type = type;
-    this[location] = resolve(storePath, `${type}.json`);
+    this[location] = `${process.env.JSON_STORE_PATH}/${type}.json`;
     this[collection] = new JsonStore(this[location]);
   }
 
