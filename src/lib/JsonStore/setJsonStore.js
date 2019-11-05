@@ -8,9 +8,7 @@ import fs from 'fs';
 const setJsonStore = (storepath, payload) => {
   const json = JSON.stringify(payload, null, 2);
 
-  fs.writeFile(storepath, json, (err) => {
-    console.log(err);
-  });
+  fs.writeFile(storepath, json, (err) => {});
 };
 
 export default setJsonStore;
