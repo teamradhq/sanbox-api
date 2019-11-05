@@ -6,6 +6,10 @@ const cachedPath = Symbol.for('JsonStoreCachePath');
 
 class JsonStore {
   constructor(storepath) {
+    if (!storepath) {
+      throw Error('A store path is required');
+    }
+    
     this[cachedPath] = storepath;
   }
 

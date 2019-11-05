@@ -7,6 +7,13 @@ import JsonStore from '@/lib/JsonStore';
 
 jest.mock('@/lib/JsonStore');
 
+// import {
+//   length,
+//   getter,
+//   setter,
+//   mockFn,
+// } from '#/mocks/JsonStore.mock';
+
 const length = jest.fn();
 const getter = jest.fn(() => [0,1]);
 const setter = jest.fn();
@@ -14,20 +21,20 @@ const setter = jest.fn();
 describe('ResourceStore', () => {
   beforeAll(() => {
     JsonStore.mockImplementation(() => {
-      const obj = {};
+  const obj = {};
 
-      Object.defineProperties(obj, {
-        length: {
-          get: length
-        },
-        data: {
-          set: setter,
-          get: getter,
-        },
-      });
+  Object.defineProperties(obj, {
+    length: {
+      get: length
+    },
+    data: {
+      set: setter,
+      get: getter,
+    },
+  });
 
-      return obj;
-    });
+  return obj;
+});
   });
 
   it('should create store when constructed', () => {
@@ -49,6 +56,7 @@ describe('ResourceStore', () => {
     expect(new ResourceStore('test').items)
       .toEqual(getter());
   });
+
 
   it('should get item by id', () => {
     expect(new ResourceStore('test').getItem(0))

@@ -14,6 +14,10 @@ describe('JsonStore', () => {
     store = new JsonStore('test-file-path');
   });
 
+  it('should throw error if storepath is not passed', () => {
+    expect(() => new JsonStore()).toThrow();
+  });
+
   it('should get json store from filesystem', () => {
     const { data } = store;
     expect(getJsonStore.default).toBeCalled();
