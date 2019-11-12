@@ -6,7 +6,7 @@ Fork this repo to start making an Express API :)
 # Setup
 
 Install packages:
-```
+```shell
 yarn
 ```
 
