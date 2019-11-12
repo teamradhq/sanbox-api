@@ -6,8 +6,9 @@ Fork this repo to start making an Express API :)
 # Setup
 
 Install packages:
-```shell
+```sh
 yarn
+cd /var/www/shop
 ```
 
 Serve your app:
